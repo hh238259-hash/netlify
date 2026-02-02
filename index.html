@@ -946,6 +946,10 @@
                     musicControl.classList.add('playing');
                 }).catch(err => console.log('Autoplay prevented'));
             }, 500);
+        // ✅ AUTO SLIDE mulai setelah klik
+            setInterval(() => {
+                moveGallery(1);
+            }, 3000);
         }
 
         function toggleMusic() {
