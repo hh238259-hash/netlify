@@ -1,0 +1,1024 @@
+<!DOCTYPE html><html lang="id"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday Puspita Anisa ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: #fff;
+            font-size: 14px;
+        }
+        
+        /* ===== LOVE FLOATING EFFECT ===== */
+        .floating-hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+        
+        .love {
+            position: absolute;
+            bottom: -50px;
+            font-size: 18px;
+            animation: floatLove linear infinite;
+            opacity: 0;
+        }
+        
+        @keyframes floatLove {
+            0% {
+                transform: translateY(0) scale(0.8) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 1; }
+            50% { opacity: 0.9; }
+            100% {
+                transform: translateY(-120vh) scale(1.2) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Cover Page */
+        .cover {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #ffecd2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 1s, visibility 1s;
+            overflow: hidden;
+            padding: 20px;
+        }
+        
+        .cover::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+        
+        .cover.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .cover-content {
+            text-align: center;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cover h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+            text-shadow: 3px 3px 15px rgba(255,107,157,0.5);
+        }
+        
+        .cover .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            animation: fadeInUp 1s ease 0.3s both;
+            letter-spacing: 2px;
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .open-btn {
+            padding: 15px 45px;
+            font-size: 1.1rem;
+            background: white;
+            color: #ff6b9d;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            animation: pulseButton 2s infinite;
+            box-shadow: 0 10px 30px rgba(255,107,157,0.4);
+        }
+        
+        @keyframes pulseButton {
+            0%, 100% { box-shadow: 0 10px 30px rgba(255,107,157,0.4); }
+            50% { box-shadow: 0 10px 40px rgba(255,107,157,0.7); }
+        }
+        
+        /* Main Content */
+        .main-content {
+            opacity: 0;
+            transition: opacity 1.5s;
+        }
+        
+        .main-content.visible {
+            opacity: 1;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #ffecd2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .hero::before {
+            top: -100px;
+            left: -100px;
+        }
+        
+        .hero::after {
+            bottom: -100px;
+            right: -100px;
+            animation-delay: 2s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, 20px); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            line-height: 1.2;
+        }
+        
+        .hero .date {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero .description {
+            font-size: 1rem;
+            line-height: 1.8;
+            font-weight: 400;
+            padding: 0 10px;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            animation: bounce 2s infinite;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-8px); }
+        }
+        
+        /* Sections */
+        section {
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #ff6b9d;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #ff6b9d;
+        }
+        
+        /* Message Section */
+        .message-section {
+            background: linear-gradient(to bottom, #fff, #fff0f5);
+        }
+        
+        .message-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(255,107,157,0.2);
+            position: relative;
+            border: 2px solid #ffc1d9;
+        }
+        
+        .message-card::before {
+            content: '💌';
+            position: absolute;
+            top: -20px;
+            right: -15px;
+            font-size: 2.5rem;
+            animation: bounce 2s infinite;
+        }
+        
+        .recipient {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #ff6b9d;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .message-card p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: #333;
+            text-align: justify;
+        }
+        
+        .signature {
+            margin-top: 2rem;
+            text-align: right;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #ff6b9d;
+            font-weight: 700;
+        }
+        
+        /* Timeline Section */
+        .timeline-section {
+            background: white;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, #ff6b9d, #ffc1d9);
+        }
+        
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .timeline-content {
+            background: linear-gradient(135deg, #fff0f5, white);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255,107,157,0.15);
+            border: 2px solid #ffc1d9;
+        }
+        
+        .timeline-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #ff6b9d;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+        
+        .date-label {
+            display: inline-block;
+            background: #ff6b9d;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        
+        .timeline-content p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -25px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid #ff6b9d;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        
+        .timeline-dot::before {
+            content: '💕';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.7rem;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background: linear-gradient(to bottom, white, #fff0f5);
+        }
+        
+        .auto-gallery-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            text-align: center;
+            color: #ff6b9d;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        .auto-slide-container {
+            overflow: hidden;
+            padding: 15px 0;
+            background: rgba(255,107,157,0.05);
+            border-radius: 20px;
+            position: relative;
+        }
+        
+        .auto-slide-track {
+            display: flex;
+            transition: transform 0.4s ease;
+            gap: 15px;
+        }
+        
+        .gallery-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: #ff6b9d;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-weight: bold;
+        }
+        
+        .gallery-nav-btn.prev { left: 5px; }
+        .gallery-nav-btn.next { right: 5px; }
+        
+        .photo-indicator {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #ff6b9d;
+            font-weight: 600;
+        }
+        
+        .auto-slide-item {
+            flex-shrink: 0;
+            width: 250px;
+            height: 320px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(255,107,157,0.2);
+        }
+        
+        .auto-slide-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Countdown */
+        .countdown-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 30px 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(255,107,157,0.2);
+            border: 2px solid #ffc1d9;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #ff6b9d;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .countdown-display {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-box {
+            background: linear-gradient(135deg, #ff9a9e, #fecfef);
+            padding: 15px 20px;
+            border-radius: 15px;
+            min-width: 70px;
+            box-shadow: 0 8px 20px rgba(255,107,157,0.3);
+        }
+        
+        .countdown-number {
+            font-family: 'Courier New', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .countdown-label {
+            font-size: 0.75rem;
+            color: white;
+            margin-top: 5px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .birthday-message {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: #ff6b9d;
+            font-weight: 700;
+            display: none;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .birthday-message.show {
+            display: block;
+            animation: fadeInUp 1s ease;
+        }
+        
+        /* Confetti */
+        .confetti {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #ff6b9d;
+            animation: confetti-fall 3s linear;
+        }
+        
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        .firework {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            animation: firework 1s ease-out forwards;
+        }
+        
+        @keyframes firework {
+            0% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--x), var(--y));
+                opacity: 0;
+            }
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #ff6b9d, #ff4a7d);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer p {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-message {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem !important;
+            font-weight: 700;
+            margin: 1.5rem 0 !important;
+        }
+        
+        .heart {
+            display: inline-block;
+            animation: heartBeat 1.5s infinite;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            10%, 30% { transform: scale(1.2); }
+            20%, 40% { transform: scale(1); }
+        }
+        
+        /* Music Control */
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff6b9d, #ff4a7d);
+            border-radius: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 8px 25px rgba(255,107,157,0.4);
+        }
+        
+        .music-control.playing {
+            animation: musicPulse 1s infinite;
+        }
+        
+        @keyframes musicPulse {
+            0%, 100% { box-shadow: 0 8px 25px rgba(255,107,157,0.4); }
+            50% { box-shadow: 0 8px 35px rgba(255,107,157,0.7); }
+        }
+    </style>
+<script defer="" data-domain="17des2025.tiiny.site" src="https://analytics.tiiny.site/js/plausible.js"></script><script type="text/javascript" src="https://tiiny.host/ad-script.js"></script><meta property="og:url" content="https://17des2025.tiiny.site/" data-id="th-modified"><meta property="og:type" content="website" data-id="th-modified"></head>
+<body>
+    
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    
+    <div class="cover" id="cover">
+        <div class="cover-content">
+            <h1>Happy Birthday</h1>
+            <p class="subtitle">For My Love ❤️</p>
+            <button class="open-btn" onclick="openInvitation()">Buka Ucapan ❤️</button>
+        </div>
+    </div>
+
+    
+    <div class="main-content" id="mainContent">
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Happy Birthday Sayang 🎂❤️😘💕</h1>
+                <p class="date">17 Desember 2025</p>
+                <p class="description">
+                    Di hari istimewa ini, mas ingin adek tahu satu hal adek sangat berharga buat mas
+                </p>
+            </div>
+            <div class="scroll-indicator">↓ Scroll ↓</div>
+        </section>
+
+        
+        <section class="message-section">
+            <h2 class="section-title">For My Love ❤️</h2>
+            <div class="message-card">
+                <div class="recipient">Puspita Anisa</div>
+                <p>Selamat ulang tahun ke-23, Puspita Anisa.</p>
+                <p>Di usia baru ini, mas ingin mengucapkan terima kasih yang paling tulus karena adek telah menjadi pasangan terbaik dalam hidup mas. Adek bukan hanya hadir di saat bahagia, tapi juga setia menemani setiap proses, perjuangan, dan langkah yang sedang mas jalani. Kehadiran adek memberi arti, ketenangan, dan kekuatan.</p>
+                <p>Semoga di umur yang ke-23 ini, adek selalu diberikan kesehatan, kebahagiaan, dan hati yang tenang. Semoga semua mimpi dan harapan kita perlahan terwujud, dan adek selalu dikelilingi oleh orang-orang yang menyayangi adek dengan tulus, sebagaimana adek menyayangi orang lain.</p>
+                <p>Mas bersyukur bisa berjalan bersama adek sampai sejauh ini. Terima kasih sudah menjadi tempat pulang, pendengar yang baik, dan pasangan yang selalu menguatkan. Semoga ke depan kita terus tumbuh bersama, saling mendukung, dan belajar menjadi versi terbaik untuk satu sama lain.</p>
+                <p>Mas akan selalu ada di samping adek, mendukung setiap langkah adek, dan merayakan setiap pencapaian adek. I love you so much sayangku cintakuuu ❤️</p>
+                <div class="signature">Dengan Cinta, Zizi</div>
+            </div>
+        </section>
+
+        
+        <section class="timeline-section">
+            <h2 class="section-title">Momen Kita Bersama</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Follow Instagram 📱</h3>
+                        <div class="date-label">Mei 2024</div>
+                        <p>Mas follow ig adek dengan mas minta WA adek dengan kata kata "P. save teman cela"</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Pertemuan Pertama 💫</h3>
+                        <div class="date-label">9 Mei 2024</div>
+                        <p>Tanggal 9 Mei 2024 di One Stick Biliard, mas sedikit melihat Puspita yang diam dan kalem. Ternyata setelah mas mengenal adek lebih jauh adek tidak seperti yang mas bayangkan.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Date Pertama 🌹</h3>
+                        <div class="date-label">Juni 2024</div>
+                        <p>Pertama kali ngedate kita date dengan Marcela dan Ajo, Gigih dan Manda. Dan mas dengan segala tidak pakai perasaan, gak mikir mikir tapi jujur semuanya tidak pernah terbayangkan hal yang kenal secara tidak sengaja dan datang tiba-tiba jadi sejauh ini hubungannya.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Memulai Hubungan 💑</h3>
+                        <div class="date-label">17 Juni 2024</div>
+                        <p>Dan mas memilih adek jadi pacar mas pada tanggal 17 Juni 2024. Tidak terlalu lama dari masa mas kenal dengan adek tapi mas nekat dengan proses yang mas pilih, lucu ya kalo di ingat yuk sama sama berjuang.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Hari Ini 🎂</h3>
+                        <div class="date-label">17 Desember 2025</div>
+                        <p>Hari Ulang Tahun Adek, Hari Spesial di tes PA PK TNI yang merupakan proses batu loncatan untuk kehidupan adek kedepannya. Mas yakin adek bisa melewati semua prosesnya, mas yakin tuhan siapkan jalan yang terbaik buat hidup adek kedepan, jangan lupa selalu bersyukur sama apa yang sudah adek dapatkan.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="gallery-section">
+            <h2 class="section-title">Galeri Kenangan Kita</h2>
+            
+            <h3 class="auto-gallery-title">✨ Semua Kenangan Kita ✨</h3>
+            <div class="auto-slide-container">
+                <button class="gallery-nav-btn prev" onclick="moveGallery(-1)">‹</button>
+                <button class="gallery-nav-btn next" onclick="moveGallery(1)">›</button>
+                <div class="auto-slide-track" id="autoSlideTrack">
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1D2e0ruBuIbivmxSfQ9x1dgN6bP9OTWsL&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1NhD7lLNkQ_gteQ20zjyffpCt8_6elBe1&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1pA5sW7Ab9Is6iMDQ_gnIvXrQTvErFXow&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1TbDDcRGI1o82IuCbRetaUwfl7APQw-c8&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1ZV_rFe1eMiQp21cX3iT9HheZv_Qf33DL&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1CDv6hu-VWk5E5PBVHHZv8WwfUvVkr0K4&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1ZbGfffY348Iz4A2Q7d6chPtqvywJKBzZ&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1vwtUCjUXYGzSXL0ySTSYv3BXQ-wPj3si&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=12UmhMnGYMPLr8dJhfmihPoyhiYS6Zckm&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1KRNkgrILX_66Ou9OjSw3w5ZMiUGx_VR3&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1zLXuNUMFNAoW-SEZD0UVy7QEzs-e9F6n&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1A-QMARQaWdzEKiMMUeiMGB4wAOvrD60h&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1yGhR0R6iwEDUfdGgpgUMSfw4GepqWipB&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1C6mcgskpa-JxKcwycJhYSUQTVToQVV-4&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1JOaHDfpNLD7oHSVfFfFf9bYT_-Va3N8w&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1BaBn9D9k-5WPOPHXDhDqDzyhz0p40OBt&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1Mxk12lGIlOByVzY4JooxwLp5IakyZmwT&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1d5omj7KjJugPr5IHAjrZXpL8K_9hHNH0&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1dGxQSRJJj_LH6Ow4f4NDXN0Qf_ZaE2Au&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1CoyBop2ILNnKrJFLIK-ibvMGv8-G4oNb&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1bgY4d_fBvNoLZBNMiELJxxTrXTSB0yHk&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=146cRZ52nAaRU7kVB4R8ECsgbxDfoeew2&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1KM3g7N_NxLy2ngF-0rfRkNK7RkMtgRzA&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1_sKW9TjjpHfCIeZpZdCKfME4cI8yjCS1&amp;sz=w500" alt="Kenangan"></div>
+                    
+                    
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1D2e0ruBuIbivmxSfQ9x1dgN6bP9OTWsL&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1NhD7lLNkQ_gteQ20zjyffpCt8_6elBe1&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1pA5sW7Ab9Is6iMDQ_gnIvXrQTvErFXow&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1TbDDcRGI1o82IuCbRetaUwfl7APQw-c8&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1ZV_rFe1eMiQp21cX3iT9HheZv_Qf33DL&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1CDv6hu-VWk5E5PBVHHZv8WwfUvVkr0K4&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1ZbGfffY348Iz4A2Q7d6chPtqvywJKBzZ&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1vwtUCjUXYGzSXL0ySTSYv3BXQ-wPj3si&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=12UmhMnGYMPLr8dJhfmihPoyhiYS6Zckm&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1KRNkgrILX_66Ou9OjSw3w5ZMiUGx_VR3&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1zLXuNUMFNAoW-SEZD0UVy7QEzs-e9F6n&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1A-QMARQaWdzEKiMMUeiMGB4wAOvrD60h&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1yGhR0R6iwEDUfdGgpgUMSfw4GepqWipB&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1C6mcgskpa-JxKcwycJhYSUQTVToQVV-4&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1JOaHDfpNLD7oHSVfFfFf9bYT_-Va3N8w&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1BaBn9D9k-5WPOPHXDhDqDzyhz0p40OBt&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1Mxk12lGIlOByVzY4JooxwLp5IakyZmwT&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1d5omj7KjJugPr5IHAjrZXpL8K_9hHNH0&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1dGxQSRJJj_LH6Ow4f4NDXN0Qf_ZaE2Au&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1CoyBop2ILNnKrJFLIK-ibvMGv8-G4oNb&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1bgY4d_fBvNoLZBNMiELJxxTrXTSB0yHk&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=146cRZ52nAaRU7kVB4R8ECsgbxDfoeew2&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1KM3g7N_NxLy2ngF-0rfRkNK7RkMtgRzA&amp;sz=w500" alt="Kenangan"></div>
+                    <div class="auto-slide-item"><img src="https://drive.google.com/thumbnail?id=1_sKW9TjjpHfCIeZpZdCKfME4cI8yjCS1&amp;sz=w500" alt="Kenangan"></div>
+                </div>
+            </div>
+            <div class="photo-indicator" id="photoIndicator">1 / 24</div>
+
+            
+            <div class="countdown-section" id="countdownSection">
+                <h3 class="countdown-title">Puspita Birthday ❤️</h3>
+                <div class="countdown-display" id="countdown">
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="days">0</div>
+                        <div class="countdown-label">Hari</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="hours">0</div>
+                        <div class="countdown-label">Jam</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="minutes">0</div>
+                        <div class="countdown-label">Menit</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-number" id="seconds">0</div>
+                        <div class="countdown-label">Detik</div>
+                    </div>
+                </div>
+                <div class="birthday-message" id="birthdayMessage">
+                    🎉 SELAMAT ULANG TAHUN PUSPITA ANISA! 🎂<br>
+                    Semoga semua mimpi dan harapan kita terwujud! 💕
+                </div>
+            </div>
+        </section>
+
+        
+        <footer>
+            <p>Made with <span class="heart">❤️</span> for Puspita Anisa</p>
+            <p class="footer-message">Happy Birthday, Sayang!</p>
+            <p style="font-style: italic; font-weight: 300; font-size: 0.9rem;">Mas sayang dan kangen sekali sama adek, trust the process 💕</p>
+        </footer>
+    </div>
+
+    
+    <div class="music-control" id="musicControl" onclick="toggleMusic()">
+        <span id="musicIcon" style="font-size: 24px; color: white;">🎵</span>
+    </div>
+
+    
+    <audio id="bgMusic" loop="" preload="auto" crossorigin="anonymous">
+        <source src="https://files.catbox.moe/yzts1g.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Preload musik
+        const audio = document.getElementById('bgMusic');
+        audio.load();
+    </script>
+
+    <script>
+        let musicPlaying = false;
+        const bgMusic = document.getElementById('bgMusic');
+        const musicControl = document.getElementById('musicControl');
+        const musicIcon = document.getElementById('musicIcon');
+        const autoSlideTrack = document.getElementById('autoSlideTrack');
+        let birthdayCelebrated = false;
+
+        // Gallery Navigation - Manual per foto
+        let currentPhoto = 0;
+        const totalPhotos = 24;
+        const photoWidth = 265; // 250px + 15px gap
+        const photoIndicator = document.getElementById('photoIndicator');
+
+        function moveGallery(direction) {
+            currentPhoto += direction;
+            
+            // Loop ke awal/akhir
+            if (currentPhoto < 0) {
+                currentPhoto = totalPhotos - 1;
+            } else if (currentPhoto >= totalPhotos) {
+                currentPhoto = 0;
+            }
+            
+            const offset = -(currentPhoto * photoWidth);
+            autoSlideTrack.style.transform = `translateX(${offset}px)`;
+            
+            // Update indikator
+            photoIndicator.textContent = `${currentPhoto + 1} / ${totalPhotos}`;
+        }
+
+        // Confetti Effect
+        function createConfetti() {
+            const colors = ['#ff6b9d', '#ffc1d9', '#ff9a9e', '#fecfef', '#ffd700'];
+            const confettiCount = 100;
+            const section = document.getElementById('countdownSection');
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 3 + 's';
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                section.appendChild(confetti);
+                
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+
+        // Fireworks Effect
+        function createFireworks() {
+            const section = document.getElementById('countdownSection');
+            const colors = ['#ff6b9d', '#ffd700', '#ff9a9e', '#ffffff'];
+            
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                    const centerX = Math.random() * 100;
+                    const centerY = Math.random() * 50;
+                    
+                    for (let j = 0; j < 20; j++) {
+                        const firework = document.createElement('div');
+                        firework.className = 'firework';
+                        firework.style.left = centerX + '%';
+                        firework.style.top = centerY + '%';
+                        firework.style.background = colors[Math.floor(Math.random() * colors.length)];
+                        
+                        const angle = (Math.PI * 2 * j) / 20;
+                        const velocity = Math.random() * 80 + 40;
+                        firework.style.setProperty('--x', Math.cos(angle) * velocity + 'px');
+                        firework.style.setProperty('--y', Math.sin(angle) * velocity + 'px');
+                        
+                        section.appendChild(firework);
+                        setTimeout(() => firework.remove(), 1000);
+                    }
+                }, i * 400);
+            }
+        }
+
+        // Countdown Timer
+        const targetDate = new Date('December 17, 2025 00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+                document.getElementById('birthdayMessage').classList.add('show');
+                
+                if (!birthdayCelebrated) {
+                    birthdayCelebrated = true;
+                    createConfetti();
+                    setTimeout(() => createFireworks(), 500);
+                    
+                    setInterval(() => {
+                        createConfetti();
+                        setTimeout(() => createFireworks(), 500);
+                    }, 10000);
+                }
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        function openInvitation() {
+            document.getElementById('cover').classList.add('hidden');
+            document.getElementById('mainContent').classList.add('visible');
+            musicControl.style.display = 'flex';
+            setTimeout(() => {
+                bgMusic.play().then(() => {
+                    musicPlaying = true;
+                    musicControl.classList.add('playing');
+                }).catch(err => console.log('Autoplay prevented'));
+            }, 500);
+        }
+
+        function toggleMusic() {
+            if (musicPlaying) {
+                bgMusic.pause();
+                musicIcon.textContent = '🔇';
+                musicControl.classList.remove('playing');
+            } else {
+                bgMusic.play();
+                musicIcon.textContent = '🎵';
+                musicControl.classList.add('playing');
+            }
+            musicPlaying = !musicPlaying;
+        }
+
+        // Floating Love Hearts Effect
+        const hearts = ["❤️","💖","💕","💗","💓","💘","💝","💞"];
+        function createLove() {
+            const love = document.createElement("div");
+            love.className = "love";
+            love.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+            love.style.left = Math.random() * 100 + "vw";
+            love.style.fontSize = (Math.random() * 15 + 12) + "px";
+            love.style.animationDuration = (Math.random() * 5 + 8) + "s";
+            document.getElementById("floatingHearts").appendChild(love);
+            setTimeout(() => {
+                love.remove();
+            }, 15000);
+        }
+        setInterval(createLove, 300);
+
+        // Swipe gesture untuk gallery
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const galleryElement = document.getElementById('autoSlideTrack');
+
+        galleryElement.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        galleryElement.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50; // Minimum swipe distance
+            if (touchStartX - touchEndX > swipeThreshold) {
+                // Swipe left - next photo
+                moveGallery(1);
+            } else if (touchEndX - touchStartX > swipeThreshold) {
+                // Swipe right - previous photo
+                moveGallery(-1);
+            }
+        }
+    </script>
+
+</body></html>
