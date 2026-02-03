@@ -925,21 +925,32 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
+        let loveInterval;
+        let autoSlideInterval;
+        
         function openInvitation() {
             document.getElementById('cover').classList.add('hidden');
             document.getElementById('mainContent').classList.add('visible');
             musicControl.style.display = 'flex';
+        
+            // ✅ Musik mulai setelah klik
             setTimeout(() => {
                 bgMusic.play().then(() => {
                     musicPlaying = true;
                     musicControl.classList.add('playing');
-                }).catch(err => console.log('Autoplay prevented'));
+                }).catch(err => console.log("Autoplay dicegah browser"));
             }, 500);
-            setInterval(createLove, 300);
+        
+            // ✅ Floating Hearts mulai hanya sekali
+            if (!loveInterval) {
+                loveInterval = setInterval(createLove, 300);
+            }
+        
+            // ✅ Auto Slide mulai hanya sekali
             if (!autoSlideInterval) {
                 autoSlideInterval = setInterval(() => {
-                    moveGallery(1); // geser ke foto berikutnya
-                }, 2500); // 2.5 detik sekali
+                    moveGallery(1);
+                }, 2500);
             }
         }
 
