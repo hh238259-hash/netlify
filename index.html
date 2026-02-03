@@ -936,6 +936,11 @@
                 }).catch(err => console.log('Autoplay prevented'));
             }, 500);
             setInterval(createLove, 300);
+            if (!autoSlideInterval) {
+                autoSlideInterval = setInterval(() => {
+                    moveGallery(1); // geser ke foto berikutnya
+                }, 2500); // 2.5 detik sekali
+            }
         }
 
         function toggleMusic() {
