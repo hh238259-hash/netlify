@@ -959,6 +959,7 @@
                     musicControl.classList.add('playing');
                 }).catch(err => console.log('Autoplay prevented'));
             }, 500);
+            setInterval(createLove, 300);
         }
 
         function toggleMusic() {
